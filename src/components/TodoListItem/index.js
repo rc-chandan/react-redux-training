@@ -1,6 +1,6 @@
 import React from 'react';
 import { TODO_STATUS } from '../../constants';
-import css from './TodoListItem.css';
+import './TodoListItem.css';
 
 const TodoListItem = props => {
     const { todo, deleteHandler, toggleTodoStatus } = props;

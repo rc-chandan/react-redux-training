@@ -9,5 +9,9 @@ export function deleteTodo(id) {
 }
 
 export function toggleTodoStatus(id) {
-    return { type: ACTION_TYPES.TOGGLE_TODO_STATUS, id};
+    return { type: ACTION_TYPES.TOGGLE_TODO_STATUS, id };
+}
+
+export function changeVisibilityFilter(filter) {
+    return { type: ACTION_TYPES.CHANGE_VISIBILITY_FILTER, filter };
 }
