@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class TodoInputForm extends Component {
+export default class InputForm extends Component {
 
     constructor(props) {
         super(props);
@@ -8,26 +8,30 @@ export default class TodoInputForm extends Component {
             inputValue: '',
         };
         this.submitForm = this.submitForm.bind(this);
-        this.handleTodoInputChange = this.handleTodoInputChange.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     render() {
         return(
             <form onSubmit={this.submitForm} >
                 <input type="text" value={this.state.inputValue} 
-                    onChange={this.handleTodoInputChange} 
+                    onChange={this.handleInputChange} 
                 />
                 <button type="submit">Add</button>
             </form>
         );
     }
 
-    handleTodoInputChange(event) {
+    handleInputChange(event) {
         this.setState(...this.state, {inputValue: event.target.value});
     }
 
     submitForm(event) {
         event.preventDefault();
-        this.props.addTodo(this.state.inputValue);
+        // Empty input field validation
+        if(!this.state.inputValue) return;
+
+        this.props.formSubmitCallback(this.state.inputValue);
+        this.setState(...this.state, {inputValue: ''});
     }
 }

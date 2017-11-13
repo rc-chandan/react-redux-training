@@ -1,0 +1,8 @@
+.todo-list-item-text {
+    display:inline-block;
+    margin-right:10px;
+}
+
+.todo-list-item-delete-btn {
+    display:inline-block;
+}
