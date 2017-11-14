@@ -9,7 +9,7 @@
  * childrens, using mapDispatchToProps method and passes it to them as props.
  * 
  * Look for how
- * getTodosWithVisibilityFilter selector is being used to fetch the visible todos :)
+ * getVisibleTodos memoized selector is being used to fetch the visible todos :)
  */
 
 
@@ -22,7 +22,7 @@ import FilterMenu from '../components/FilterMenu';
 
 import { addTodo, deleteTodo, toggleTodoStatus, changeVisibilityFilter } from '../actions';
 import { FILTER_OPTIONS } from '../constants';
-import { getTodosWithVisibilityFilter } from '../selectors';
+import { getVisibleTodos } from '../selectors';
 
 const TodoApp = props => (
     <div>
@@ -39,7 +39,7 @@ const TodoApp = props => (
 
 const mapStateToProps = (state) => {
     return { 
-        todos: getTodosWithVisibilityFilter(state.todoReducer.todos, state.todoReducer.visibility) 
+        todos: getVisibleTodos(state)
     }
 }
 
