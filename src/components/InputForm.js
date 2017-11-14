@@ -1,12 +1,21 @@
+/**
+ * @author rc-chandan
+ * 
+ * Dumb component to render a input text box and a submit button
+ * Takes these two props from parent
+ * 
+ * E.x of dumb component with internal react state
+ * This component controlls the text box state locally untill the 
+ * Add button is clicked
+ */
+
 import React, { Component } from 'react';
 
 export default class InputForm extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            inputValue: '',
-        };
+        this.state = { inputValue: '' };
         this.submitForm = this.submitForm.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
     }

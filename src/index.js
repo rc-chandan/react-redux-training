@@ -1,9 +1,19 @@
+/**
+ * @author rc-chandan
+ * 
+ * Entry file of the app
+ * This is used to bootstrap various components
+ *  - like initializing the store
+ *  - mounting the App component to the html page etc.
+ */
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 import TodoApp from './containers/TodoApp';
 import reducer from './reducers';
@@ -19,6 +29,8 @@ const App = props => (
     </Provider>
 );
 
+// Mount the APP to html div with id root
 ReactDOM.render(<App />, document.getElementById('root'));
 
+// Fancy stuff done by fb developers to speed up the app loading
 registerServiceWorker();
