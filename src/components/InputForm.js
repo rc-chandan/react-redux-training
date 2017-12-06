@@ -1,7 +1,7 @@
 /**
  * @author rc-chandan
  * 
- * Dumb component to render a input text box and a submit button
+ * Dumb component to render an input text box and a submit button
  * Takes these two props from parent
  * 
  * E.x of dumb component with internal react state
