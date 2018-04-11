@@ -4,8 +4,10 @@
 .todo-list-item-text {
     display:inline-block;
     margin-right:10px;
+    cursor: pointer;
 }
 
 .todo-list-item-delete-btn {
     display:inline-block;
+    cursor: pointer;
 }
