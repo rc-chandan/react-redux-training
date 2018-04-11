@@ -1,12 +1,13 @@
 {
   "name": "react-redux-todo-app",
-  "version": "1.2",
+  "version": "v1.2.1",
   "homepage": "https://rc-chandan.github.io/react-redux-training/",
   "author": {
     "name": "Chandan Kumar Rana",
     "email": "chandan316@outlook.com",
     "url": "https://rc-chandan.github.io"
   },
+  "license": "MIT",
   "keywords": [
     "react training",
     "redux training",
@@ -22,6 +23,7 @@
     "uuid": "^3.1.0"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "react-scripts": "1.0.17",
     "redux-devtools-extension": "^2.13.2"
   },
@@ -29,6 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
